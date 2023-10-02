@@ -1,0 +1,17 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug ens18
+iface ens18 inet static
+  address 10.0.1.56
+  netmask 255.255.255.0
+  gateway 10.0.1.1
+  dns-domain goomba.local
+  dns-nameservers 10.0.1.2 1.1.1.1
